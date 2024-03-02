@@ -7,15 +7,16 @@ body{
     max-width: 1100px;
     margin: 0 auto;
     padding: 0;
-    margin-top: 35px;
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
 }
 #header{
+    height: 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 section{
     margin-top: 55px;
@@ -36,12 +37,9 @@ section{
 }
 .menu{
     display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 5px;
 }
 .menu li{
-    margin: 25px;
+    padding: 10px;
     list-style: none;
 }
 .menu a{
@@ -155,58 +153,58 @@ button i{
     margin-top: 10px;
 }
 .main-destination{
-    max-width: 100%;
     margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
 }
-.main-destination img{
-    max-width: 100%;
+
+.destination{
+    position: relative;
+}
+.destination> img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.destination>h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
 }
 .destination-1{
-    display: grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap: 18px;
-    position: relative;
-}
-.destination-1 h1{
-    position: absolute;
-    top: 50%;
-    margin-left: 180px;
-    color: white;
+    width: 100%;
+    grid-column:1 / span 6;
 }
 .destination-2{
-    display: grid;
-    grid-template-columns:330px 450px 300px;
-    gap: 18px;
-    margin-top: 15px;
-    position: relative;
-}
-.destination-2 h1{
-    position: absolute;
-    top: 50%;
-    color: white;
-    margin-left: 110px;
-}
-.destination-2 img{
-    height: 300px;
+    width: 100%;
+    grid-column:7 / span 6;
 }
 .destination-3{
-    display: grid;
-    grid-template-columns: 455px 630px;
-    gap: 18px;
-    margin-top: 15px;
-    position: relative;
+    width: 100%;
+    grid-column:1 / span 3;
 }
-.destination-3 h1{
-    position: absolute;
-    top: 50%;
-    color: white;
-    margin-left: 150px;
+.destination-4{
+    width: 100%;
+    grid-column:4 / span 7;
+}
+.destination-5{
+    width: 100%;
+    grid-column:11 / span 2;
+}
+.destination-6{
+    width: 100%;
+    grid-column:1 / span 5;
+}
+.destination-7{
+    width: 100%;
+    grid-column:6 / span 7;
 }
 .bandarban h1{
     margin-left: 250px;
-}
-.destination-3 img{
-    height: 300px;
 }
 /* Why Chose US */
 .choose-title{
@@ -447,4 +445,106 @@ footer p{
     width: 80%;
     margin: auto;
     margin-bottom: 25px;
+}
+
+/* menu icons */
+.menu_icon{
+    display: none;
+}
+
+@media only screen and (max-width:560px){
+    .menu_icon{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 70%;
+    }
+    .banner-content h2{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .banner{
+        height: 580px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn{
+        background-color: #FF5400;
+        max-width: 71%;
+    }
+
+    .popular-tour{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .popular-text{
+        padding: 10px;
+    }
+    .main-destination{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
+    .destination{
+        grid-column: 1/-1;
+    }
+    .choose-content{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .discount{
+        width: 450px;
+        margin-left: -145px;
+    }
+    
+    .package-1{
+        margin-left: -20%;
+    }
+    .package-2{
+        margin-left: -20%;
+    }
+    .package-3{
+        margin-left: -20%;
+    }
+    .perfect-place{
+        display: flex;
+        flex-direction: column;
+    }
+    .newsletter{
+        display: flex;
+        flex-direction: column;
+    }
+    .newsletter-img{
+        width: 100%;
+    }
+    .newsletter-img img{
+        width: 100%;
+    }
+    .travel{
+        text-align: center;
+    }
+    .perfect-place-img h4{
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        color: rgb(221, 210, 210);
+    }
+    .perfect-place-img{
+        width: 100%;
+    }
+    .perfect-place-img img{
+        width: 100%;
+    }
 }
